@@ -1,53 +1,23 @@
 class Card:
     def __init__(self, suit, rank):
         self.suit = suit
-        self.rank = rank
-        pass
-Ks = Card('Spade', 13)
-Qs = Card('Spade', 12)
-Js = Card('Spade', 11)
-TENs = Card('Spade', 10)
-NINEs = Card('Spade', 9)
-EIGHTs = Card('Spade', 8)
-SEVENs = Card('Spade', 7)
-SIXs = Card('Spade', 6)
-FIVEs = Card('Spade', 5)
-FOURs = Card('Spade', 4)
-THREEs = Card('Spade', 3)
-TWOs = Card('Spade', 2)
-Ks = Card('Spade', 13)
-Qs = Card('Spade', 12)
-Js = Card('Spade', 11)
-TENs = Card('Spade', 10)
-NINEs = Card('Spade', 9)
-EIGHTs = Card('Spade', 8)
-SEVENs = Card('Spade', 7)
-SIXs = Card('Spade', 6)
-FIVEs = Card('Spade', 5)
-FOURs = Card('Spade', 4)
-THREEs = Card('Spade', 3)
-TWOs = Card('Spade', 2)
-Ks = Card('Spade', 13)
-Qs = Card('Spade', 12)
-Js = Card('Spade', 11)
-TENs = Card('Spade', 10)
-NINEs = Card('Spade', 9)
-EIGHTs = Card('Spade', 8)
-SEVENs = Card('Spade', 7)
-SIXs = Card('Spade', 6)
-FIVEs = Card('Spade', 5)
-FOURs = Card('Spade', 4)
-THREEs = Card('Spade', 3)
-TWOs = Card('Spade', 2)
-Ks = Card('Spade', 13)
-Qs = Card('Spade', 12)
-Js = Card('Spade', 11)
-TENs = Card('Spade', 10)
-NINEs = Card('Spade', 9)
-EIGHTs = Card('Spade', 8)
-SEVENs = Card('Spade', 7)
-SIXs = Card('Spade', 6)
-FIVEs = Card('Spade', 5)
-FOURs = Card('Spade', 4)
-THREEs = Card('Spade', 3)
-TWOs = Card('Spade', 2)
+        self.rank = rank 
+    def show(self):
+        print('{} of {}'.format(self.rank, self.suit)) # method that is used on a single card to identify
+# card = Card('card', 5)
+# card.show()
+
+
+class Deck:
+    def __init__(self) -> None:
+        self.cards = []
+        self.build()
+    def build(self):
+        for s in ['Spades', 'Hearts', 'Clubs', 'Diamonds']:
+            for r in range(1,14):
+                self.cards.append(Card(s, r))
+    def show(self):
+        for c in self.cards:
+            print(c)
+class Player:
+    pass
