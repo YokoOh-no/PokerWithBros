@@ -21,6 +21,11 @@ class Deck:
     def show(self):
         for c in self.cards:
             c.show()
+    def schuffle(self):
+        for i in range(len(self.cards) - 1, 0, -1): # assigns i to every card in deck
+            r = random.randint(0, i) # assigns random int in range of total cards in deck to card 
+            self.cards[i], self.cards[r] = self.cards[r], self.cards[i] # switches index with random index 
+
 # test_deck = Deck()
 # test_deck.show()
 class Player:
